@@ -50,7 +50,7 @@ var orderUp = function() {
     }]).then(function(answer) {
         var query = "SELECT item_id,product_name,price FROM `products`";
         connection.query(query, answer.id, function(err, res) {
-            var i = answer.id--;
+            var i = answer.id;
             console.log("You selected: " + res[i].product_name + ", Price: $" + res[i].price);
             
         })
